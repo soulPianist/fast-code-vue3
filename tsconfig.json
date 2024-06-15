@@ -1,0 +1,11 @@
+{
+  "exclude": ["node_modules/**"],
+  "compilerOptions": {
+    "outDir": "typed",
+    "skipLibCheck": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "maxNodeModuleJsDepth":30,
+  },
+  "include": ["types/*.d.ts","types/*.ts","types/**/*.ts","types/**/*.d.ts","components/**/*.ts", "components/**/*.vue"],
+}

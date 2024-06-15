@@ -1,0 +1,155 @@
+<template>
+  <div :class="'dynamicInput col ' + (border ? 'border' : '')">
+    <div v-for="(item, index) in valueCom" :key="index" class="dynamicInput-item">
+      <div
+        v-if="addTypes.indexOf('top') !== -1 && index === 0 && dynamic === true"
+        class="add btns row"
+      >
+        <span @click="addItem(index)">
+          <slot name="addbtnTop">
+            <el-button>添加</el-button>
+          </slot>
+        </span>
+      </div>
+      <div
+        v-if="addTypes.indexOf('center') !== -1 && index !== 0 && dynamic === true"
+        class="add btns row"
+      >
+        <span @click="addItem(index)">
+          <slot name="addbtnCenter">
+            <el-button>添加</el-button>
+          </slot>
+        </span>
+      </div>
+      <div class="row">
+        <div class="dynamicInput-item-input">
+          <slot :index="index" :dataList="valueCom"> 请添加输入框 </slot>
+        </div>
+        <div class="del item-btns btns">
+          <span @click="delItem(index)">
+            <slot name="deleteBtn">
+              <el-button>
+                <el-icon><Delete /></el-icon>
+              </el-button>
+            </slot>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      v-if="dynamic === true && addTypes.indexOf('bottom') !== -1"
+      class="add btns row"
+    >
+      <span @click="addItem()">
+        <slot name="addbtnBottom">
+          <el-button>添加</el-button>
+        </slot>
+      </span>
+    </div>
+  </div>
+</template>
+<script>
+import { Delete } from "@element-plus/icons-vue";
+export default {
+  name: "fc-dynamic-input",
+  components: {
+    Delete,
+  },
+  props: {
+    border: {
+      default: false,
+      type: Boolean,
+    },
+    addTypes: {
+      default: "center bottom",
+      type: String,
+    },
+    limit: {
+      default: 1,
+      type: Number,
+    },
+    disable: {
+      default: false,
+      type: Boolean,
+    },
+    dynamic: {
+      default: true,
+      type: Boolean,
+    },
+    type: {
+      default: "Object",
+      type: String,
+    },
+    modelValue: {
+      default: ()=>[],
+      type: Array,
+    },
+  },
+  computed: {
+    valueCom: {
+      get() {
+        return this.modelValue;
+      },
+      set(value) {
+        this.$emit("update:modelValue", value);
+      },
+    },
+  },
+  data() {
+    return {};
+  },
+  created() {
+    this.init();
+  },
+  methods: {
+    init() {
+      this.addItemByLimit();
+    },
+    addItemByLimit() {
+      for (let i = 0; i < this.limit; i++) {
+        this.addItem();
+      }
+    },
+    delItem(index) {
+      this.valueCom.splice(index, 1);
+      this.$emit("update:modelValue", this.valueCom);
+    },
+    addItem(index) {
+      let temp = {};
+      if (this.type === "Object") {
+        temp = {};
+      } else if (this.type === "String") {
+        temp = "";
+      } else if (this.type === "Number") {
+        temp = 0;
+      } else if (this.type === "Array") {
+        temp = [];
+      }
+      if (index === undefined || index === null) {
+        this.valueCom.push(temp);
+      }
+      if (typeof index === "number") {
+        this.valueCom.splice(index, 0, temp);
+      }
+      this.$emit("update:modelValue", this.valueCom);
+    },
+  },
+};
+</script>
+<style scoped>
+.row {
+  display: flex;
+  align-items: center;
+}
+.dynamicInput-item-input {
+  flex: 1;
+}
+.add {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+.del {
+  margin-left: 5px;
+}
+</style>
