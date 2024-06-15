@@ -482,125 +482,125 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
         hide?: boolean;
         component: "slot";
     } | {
-        props?: import("../../types/util").TObjToComputed<import("element-plus").AffixProps> | import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp>;
-        events?: import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("element-plus").AffixProps>> | import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>>;
+        events?: import("../../types/util").TObjToComputed<Partial<{
             scroll: ({ scrollTop, fixed }: {
                 scrollTop: number;
                 fixed: boolean;
             }) => boolean;
             change: (fixed: boolean) => boolean;
-        }> | import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent>;
+        }>> | import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>>;
         component: import("../../types/util").TBaseToComputed<"el-affix">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").AlertProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").AlertProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             close: (evt: MouseEvent) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-alert">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("element-plus").FormProps> | import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp>;
-        events?: import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("element-plus").FormProps>> | import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>>;
+        events?: import("../../types/util").TObjToComputed<Partial<{
             validate: (prop: import("element-plus").FormItemProp, isValid: boolean, message: string) => boolean;
-        }> | import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent>;
+        }>> | import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>>;
         component: import("../../types/util").TBaseToComputed<"el-form">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").FormItemProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").FormItemEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").FormItemProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").FormItemEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-form-item">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("element-plus").ButtonProps> | import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("element-plus").ButtonProps>> | import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             click: (evt: MouseEvent) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-button">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").BorderProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").BorderEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").BorderProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").BorderEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-border">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").ContainerProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").ContainerEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").ContainerProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").ContainerEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-container">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").IconProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").IconEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").IconProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").IconEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-icon">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").RowProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").RowEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").RowProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").RowEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-row">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").LinkProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").LinkProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             click: (evt: MouseEvent) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-link">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").TextProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").TextEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").TextProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TextEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-text">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").ScrollbarProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").ScrollbarProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             scroll: ({ scrollTop, scrollLeft, }: {
                 scrollTop: number;
                 scrollLeft: number;
             }) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-scrollbar">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").SpaceProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").SpaceEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").SpaceProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").SpaceEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-space">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").ConfigProviderProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").ConfigProviderEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").ConfigProviderProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").ConfigProviderEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-config-provider">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").AutocompleteProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").AutocompleteProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             "update:modelValue": (value: string) => boolean;
             input: (value: string) => boolean;
             change: (value: string) => boolean;
@@ -608,14 +608,14 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
             blur: (evt: FocusEvent) => boolean;
             clear: () => boolean;
             select: (item: Record<string, any>) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-autocomplete">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").CascaderProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").CascaderProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             "update:modelValue": (val: import("element-plus").CascaderValue) => boolean;
             change: (val: import("element-plus").CascaderValue) => boolean;
             focus: (evt: FocusEvent) => boolean;
@@ -623,44 +623,44 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
             visibleChange: (val: boolean) => boolean;
             expandChange: (val: import("element-plus").CascaderValue) => boolean;
             removeTag: (val: import("element-plus/es/components/cascader-panel/src/node").CascaderNodeValue | import("element-plus/es/components/cascader-panel/src/node").CascaderNodePathValue) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-cascader">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").CheckboxProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").CheckboxProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             'update:checked': (value: boolean) => boolean;
             change: (value: boolean) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-checkbox">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").ColorPickerProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").ColorPickerProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             "update:modelValue": (val: string) => boolean;
             change: (val: string) => boolean;
             activeChange: (val: string) => boolean;
             focus: (event: FocusEvent) => boolean;
             blur: (event: FocusEvent) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-color-picker">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").DatePickerProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").DatePickerEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").DatePickerProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").DatePickerEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-date-picker">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").InputProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").InputProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             "update:modelValue": (value: string) => boolean;
             input: (value: string) => boolean;
             change: (value: string) => boolean;
@@ -673,375 +673,375 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
             compositionstart: (evt: CompositionEvent) => boolean;
             compositionupdate: (evt: CompositionEvent) => boolean;
             compositionend: (evt: CompositionEvent) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-input">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").InputNumberProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").InputNumberProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             change: (cur: number, prev: number) => boolean;
             blur: (e: FocusEvent) => boolean;
             focus: (e: FocusEvent) => boolean;
             input: (val: number) => boolean;
             "update:modelValue": (val: number) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-input-number">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").RadioGroupProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").RadioGroupProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             "update:modelValue": (val: string | number | boolean) => boolean;
             change: (val: string | number | boolean) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-radio-group">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").RadioProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").RadioProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             "update:modelValue": (val: string | number | boolean) => boolean;
             change: (val: string | number | boolean) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-radio">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").RateProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").RateProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             change: (value: number) => boolean;
             "update:modelValue": (value: number) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-rate">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").SelectProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").SelectEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").SelectProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").SelectEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-select">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").SelectV2Props>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").SelectV2Emits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").SelectV2Props>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").SelectV2Emits>>;
         component: import("../../types/util").TBaseToComputed<"el-select-v2">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").SliderProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("element-plus").SliderProps>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").SliderProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").SliderProps>>;
         component: import("../../types/util").TBaseToComputed<"el-slider">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").SwitchProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").SwitchProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             "update:modelValue": (val: string | number | boolean) => boolean;
             change: (val: string | number | boolean) => boolean;
             input: (val: string | number | boolean) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-switch">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").TimePickerProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").TimePickerEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TimePickerProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TimePickerEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-time-picker">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").TimeSelectProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").TimeSelectEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TimeSelectProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TimeSelectEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-time-select">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").TransferProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").TransferProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             change: (value: import("element-plus").TransferKey[], direction: import("element-plus").TransferDirection, movedKeys: import("element-plus").TransferKey[]) => boolean;
             "update:modelValue": (value: import("element-plus").TransferKey[]) => boolean;
             "left-check-change": (value: import("element-plus").TransferKey[], movedKeys?: import("element-plus").TransferKey[]) => boolean;
             "right-check-change": (value: import("element-plus").TransferKey[], movedKeys?: import("element-plus").TransferKey[]) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-transfer">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").UploadProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").UploadEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").UploadProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").UploadEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-upload">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").AvatarProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").AvatarProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             error: (evt: Event) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-avatar">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").BadgeProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").BadgeEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").BadgeProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").BadgeEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-badge">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").CalendarProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").CalendarProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             "update:modelValue": (value: Date) => boolean;
             input: (value: Date) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-calendar">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").CardProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").CardEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").CardProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").CardEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-card">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").CarouselProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").CarouselProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             change: (current: number, prev: number) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-carousel">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").CollapseProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").CollapseProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             "update:modelValue": (value: import("element-plus").CollapseModelValue) => "string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function";
             change: (value: import("element-plus").CollapseModelValue) => "string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function";
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-collapse">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").DescriptionsProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").DescriptionsEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").DescriptionsProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").DescriptionsEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-descriptions">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").EmptyProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").EmptyEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").EmptyProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").EmptyEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-empty">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").ImageProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").ImageProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             load: (evt: Event) => boolean;
             error: (evt: Event) => boolean;
             switch: (val: number) => boolean;
             close: () => boolean;
             show: () => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-image">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").InfiniteScrollProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").InfiniteScrollEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").InfiniteScrollProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").InfiniteScrollEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-infinite-scroll">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").PaginationProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").PaginationProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             'update:current-page': (val: number) => boolean;
             'update:page-size': (val: number) => boolean;
             'size-change': (val: number) => boolean;
             'current-change': (val: number) => boolean;
             'prev-click': (val: number) => boolean;
             'next-click': (val: number) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-pagination">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").ProgressProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").ProgressEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").ProgressProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").ProgressEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-progress">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").ResultProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").ResultEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").ResultProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").ResultEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-result">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus/es/components/table/src/table/defaults").TableProps<any>>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").TableEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus/es/components/table/src/table/defaults").TableProps<any>>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TableEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-table">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").TableColumnProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").TableColumnEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TableColumnProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TableColumnEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-table-column">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").TableV2Props>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").TableV2Emits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").TableV2Props>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TableV2Emits>>;
         component: import("../../types/util").TBaseToComputed<"el-table-v2">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").TagProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").TagProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             close: (evt: MouseEvent) => boolean;
             click: (evt: MouseEvent) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-tag">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").TimelineProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").TimelineEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TimelineProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TimelineEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-timeline">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").TimelineItemProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").TimelineItemEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").TimelineItemProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TimelineItemEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-timeline-item">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").TreeProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").TreeEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TreeProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TreeEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-tree">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TreeProps & import("../../types/plus").SelectProps>>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TreeEmits & import("../../types/plus").SelectEmits>>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<Partial<import("../../types/plus").TreeProps & import("../../types/plus").SelectProps>>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<Partial<import("../../types/plus").TreeEmits & import("../../types/plus").SelectEmits>>>;
         component: import("../../types/util").TBaseToComputed<"el-tree-select">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").TreeV2Props>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").TreeV2Emits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TreeV2Props>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TreeV2Emits>>;
         component: import("../../types/util").TBaseToComputed<"el-tree-v2">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").StatisticProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").StatisticEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").StatisticProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").StatisticEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-statistic">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").BacktopProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").BacktopProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             click: (evt: MouseEvent) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-backtop">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").BreadcrumbProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").BreadcrumbEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").BreadcrumbProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").BreadcrumbEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-breadcrumb">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").BreadcrumbItemProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").BreadcrumbItemEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").BreadcrumbItemProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").BreadcrumbItemEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-breadcrumb-item">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").DropdownProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").DropdownEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").DropdownProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").DropdownEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-dropdown">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").MenuProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").MenuProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             close: (index: string, indexPath: string[]) => boolean;
             open: (index: string, indexPath: string[]) => boolean;
             select: (index: string, indexPath: string[], item: import("element-plus").MenuItemClicked, routerResult?: Promise<void | import("vue-router").NavigationFailure>) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-menu">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").PageHeaderProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").PageHeaderProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             back: () => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-page-header">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").StepsProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").StepsProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             change: (newVal: number, oldVal: number) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-steps">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").StepProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").StepEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").StepProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").StepEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-step">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("element-plus").TabsProps> | import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp>;
-        events?: import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("element-plus").TabsProps>> | import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>>;
+        events?: import("../../types/util").TObjToComputed<Partial<{
             "update:modelValue": (name: import("element-plus").TabPaneName) => boolean;
             tabClick: (pane: {
                 uid: number;
@@ -1064,21 +1064,21 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
             edit: (paneName: import("element-plus").TabPaneName, action: "add" | "remove") => boolean;
             tabRemove: (name: import("element-plus").TabPaneName) => boolean;
             tabAdd: () => boolean;
-        }> | import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent>;
+        }>> | import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>>;
         component: import("../../types/util").TBaseToComputed<"el-tabs">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").TabPaneProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").TabPaneEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").TabPaneProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").TabPaneEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-tab-pane">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("element-plus").DialogProps> | import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp>;
-        events?: import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("element-plus").DialogProps>> | import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>>;
+        events?: import("../../types/util").TObjToComputed<Partial<{
             open: () => boolean;
             opened: () => boolean;
             close: () => boolean;
@@ -1086,83 +1086,83 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
             "update:modelValue": (value: boolean) => boolean;
             openAutoFocus: () => boolean;
             closeAutoFocus: () => boolean;
-        }> | import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent>;
+        }>> | import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>>;
         component: import("../../types/util").TBaseToComputed<"el-dialog">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").DrawerProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").DrawerEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").DrawerProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").DrawerEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-drawer">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").LoadingProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").LoadingEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").LoadingProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").LoadingEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-loading">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").MessageProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").MessageProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             destroy: () => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-message">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("../../types/plus").MessageBoxProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").MessageBoxEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").MessageBoxProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").MessageBoxEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-message-box">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").NotificationProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").NotificationProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             destroy: () => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-notification">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").PopconfirmProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").PopconfirmProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             confirm: (e: MouseEvent) => boolean;
             cancel: (e: MouseEvent) => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-popconfirm">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").PopoverProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<{
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").PopoverProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<{
             'update:visible': (value: boolean) => boolean;
             'before-enter': () => boolean;
             'before-leave': () => boolean;
             'after-enter': () => boolean;
             'after-leave': () => boolean;
-        }>;
+        }>>;
         component: import("../../types/util").TBaseToComputed<"el-popover">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").ElTooltipProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").ElTooltipEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").ElTooltipProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").ElTooltipEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-tooltip">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;
         hide?: import("../../types/util").TBaseToComputed<false> | import("../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyProp> | import("../../types/util").TObjToComputed<import("element-plus").DividerProps>;
-        events?: import("../../types/util").TObjToComputed<import("../../types/FCElement").TAnyEvent> | import("../../types/util").TObjToComputed<import("../../types/plus").DividerEmits>;
+        props?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyProp>> | import("../../types/util").TObjToComputed<Partial<import("element-plus").DividerProps>>;
+        events?: import("../../types/util").TObjToComputed<Partial<import("../../types/FCElement").TAnyEvent>> | import("../../types/util").TObjToComputed<Partial<import("../../types/plus").DividerEmits>>;
         component: import("../../types/util").TBaseToComputed<"el-divider">;
         label: import("../../types/util").TBaseToComputed<string>;
         prop: import("../../types/util").TBaseToComputed<string>;

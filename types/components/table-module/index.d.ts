@@ -5,51 +5,51 @@ import type { TtoComputed } from '../../util'
 
 type TLayout = {
   table?: {
-    events?: TEl.TableEmits,
-    props?: TEl.TableProps
+    events?: Partial<TEl.TableEmits>,
+    props?: Partial<TEl.TableProps>
   },
   actions?: {
-    props?: TEl.TableProps
+    props?: Partial<TEl.TableProps>
   },
   header?: {
     title?: string
   },
   pagination?: {
     hide?: boolean,
-    props?: TEl.PaginationProps,
-    events?: TEl.PaginationEmits
+    props?: Partial<TEl.PaginationProps>,
+    events?: Partial<TEl.PaginationEmits>
   },
   search?: {
     row?: boolean,
     form?:{
       cols?:number,
-      props?:TEl.FormProps,
-      events?:TEl.FormEmits
+      props?:Partial<TEl.FormProps>,
+      events?:Partial<TEl.FormEmits>
     },
     searchBtn?: {
       label?: string
-    } & TEl.ButtonProps,
+    } & Partial<TEl.ButtonProps>,
     resetBtn?: {
       label?: string
-    } & TEl.ButtonProps
+    } & Partial<TEl.ButtonProps>
   }
 }
 
 type TTabs = {
-  events?: TEl.TabsEmits
-  props?: TEl.TabsProps
+  events?: Partial<TEl.TabsEmits>
+  props?: Partial<TEl.TabsProps>
   key: string,
   options: Array<{
     label: string,
     value: string | number,
-    props?: TEl.TabPaneProps,
-    events?: TEl.TabPaneEmits
+    props?: Partial<TEl.TabPaneProps>,
+    events?: Partial<TEl.TabPaneEmits>
   }>
 }
 
 type TActions = Array<{
   label: string,
-  props: TEl.ButtonProps,
+  props: Partial<TEl.ButtonProps>,
   hide?: boolean | ((params: any) => boolean),
   action: (...arg: any[]) => any
 }>
@@ -70,7 +70,7 @@ type TColumns = Array<({
   prop: string,
   label: string,
   hide?: boolean,
-  props?: TFC.TableColumnProps
+  props?:Partial<TFC.TableColumnProps>
 })>
 
 export type TTableModule = {

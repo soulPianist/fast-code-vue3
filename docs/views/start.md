@@ -16,3 +16,8 @@ app.use(fc)
 app.use(el)
 
 ````
+
+本地文档查看
+```` js
+npx docs
+````

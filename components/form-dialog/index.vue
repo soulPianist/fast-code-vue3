@@ -102,7 +102,7 @@ const resetBtn = computed(() => {
 })
 
 const submitBtn = computed(() => {
-  const _props = {
+  const _props:any = {
     type:'primary'
   }
   return lodash.merge({

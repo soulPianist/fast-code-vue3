@@ -1,6 +1,11 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  vite: {
+    server: {
+      open: true
+    }
+  },
   title: "fast-code-vue3",
   description: "@only_you/fast-code-vue3文档",
   head: [

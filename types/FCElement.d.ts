@@ -5,8 +5,8 @@ export  type TAnyEvent = { [key: string]: (...arg: any[]) => any }
 export type TAnyProp = { [key: string]: any }
 
 export type TBaseElCom<N,P,E> = {
-  props?: P | TAnyProp,
-  events?: E | TAnyEvent,
+  props?: Partial< P | TAnyProp>,
+  events?: Partial< E | TAnyEvent>,
   component: N
 }
 

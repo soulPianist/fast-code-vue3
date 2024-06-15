@@ -21,7 +21,12 @@ class FormModule implements IFormModule {
     this.reset = options.reset
   }
   getOption(prop: string):TObjToComputed<TOption> | undefined {
-    return unref(this.options)?.find(item => unref(item)?.prop === prop)
+    const options = unref(this.options)
+    if(options?.length){
+      // @ts-ignore: 类型实例化过深，且可能无限。
+      return options?.find(item => unref(item)?.prop === prop)
+    }
+    return
   }
 }
 

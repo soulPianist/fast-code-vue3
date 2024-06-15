@@ -11,7 +11,7 @@ type TLayout = {
     
   },
   card?: {
-    props:TEl.CardProps,
+    props:Partial<TEl.CardProps>,
   }
 }
 
@@ -20,8 +20,8 @@ type THeader = {
 }
 
 type TForm = {
-  props?: TEl.FormProps,
-  events?: TEl.FormEmits
+  props?: Partial<TEl.FormProps>,
+  events?: Partial<TEl.FormEmits>
 }
 
 type TBtn = {
@@ -29,13 +29,13 @@ type TBtn = {
     hide?: boolean,
     title?: string,
     action: (...arg: any[]) => any,
-    props?: TEl.ButtonProps
+    props?: Partial<TEl.ButtonProps>
   },
   reset?: {
     hide?: boolean,
     title?: string,
     action?: (...arg: any[]) => any,
-    props?: TEl.ButtonProps
+    props?: Partial<TEl.ButtonProps>
   }
 }
 
