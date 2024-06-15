@@ -46,5 +46,5 @@
     "docs:preview": "vitepress preview docs"
   },
   "type": "module",
-  "version": "0.0.60"
+  "version": "0.0.62"
 }

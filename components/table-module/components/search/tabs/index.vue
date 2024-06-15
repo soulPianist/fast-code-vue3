@@ -41,7 +41,7 @@ const tabs = computed(() => {
 const showTabs = computed(() => {
   return unref(unref(props.tabs)?.options)?.filter(item=>{
     return !unref(unref(unref(item).props)?.disabled)
-  }).map(item=>{
+  }).map((item)=>{
     return unref(item)
   })
 })
