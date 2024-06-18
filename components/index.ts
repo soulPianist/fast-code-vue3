@@ -14,6 +14,7 @@ const install = (app: App<Element>) => {
   app.component('FCTable', FCTable)
   app.component('FCFormDialog', FCFormDialog)
 }
+
 export default {
   install
 }
