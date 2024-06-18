@@ -3,7 +3,7 @@ declare const _default: import("vue").DefineComponent<{
         default: boolean;
         type: BooleanConstructor;
     };
-    addTypes: {
+    addButtonPositon: {
         default: string;
         type: StringConstructor;
     };
@@ -42,7 +42,7 @@ declare const _default: import("vue").DefineComponent<{
         default: boolean;
         type: BooleanConstructor;
     };
-    addTypes: {
+    addButtonPositon: {
         default: string;
         type: StringConstructor;
     };
@@ -68,7 +68,7 @@ declare const _default: import("vue").DefineComponent<{
     };
 }>>, {
     border: boolean;
-    addTypes: string;
+    addButtonPositon: string;
     limit: number;
     disable: boolean;
     dynamic: boolean;
