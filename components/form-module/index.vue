@@ -138,7 +138,7 @@ const resetFields = () => {
 
 const reset = () => {
   resetLoading.value = true
-  formRef.value.resetFields();
+  formRef.value?.resetFields();
   optionRefs.value?.forEach((item: any) => {
     item?.resetFields()
   })
