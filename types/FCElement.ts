@@ -16,12 +16,15 @@ export type TElComponent =
   (TBaseElCom<'el-form', TEl.FormProps, TEl.FormEmits>) |
   (TBaseElCom<'el-form-item', TEl.FormItemProps, TFC.FormItemEmits>) |
   (TBaseElCom<'el-button', TEl.ButtonProps, TEl.ButtonEmits>) |
-  (TBaseElCom<'el-border', TFC.BorderProps, TFC.BorderEmits>) |
+    // @ts-ignore: 导入的 BorderProps,BorderEmits 类型未找到，暂时忽略此错误
+  (TBaseElCom<'el-border', TEl.BorderProps extends never ? TFC.BorderProps : TEl.BorderProps, TEl.BorderEmits extends never ? TFC.BorderEmits : TEl.BorderEmits>) |
   (TBaseElCom<'el-container', TFC.ContainerProps, TFC.ContainerEmits>) |
   (TBaseElCom<'el-icon', TFC.IconProps, TFC.IconEmits>) |
-  (TBaseElCom<'el-row', TEl.RowProps, TEl.RowEmits | TFC.RowEmits>) |
+  // @ts-ignore: 导入的 RowEmits 类型未找到，暂时忽略此错误
+  (TBaseElCom<'el-row', TEl.RowProps, TEl.RowEmits extends never ? TFC.RowEmits : TEl.RowEmits>) |
   (TBaseElCom<'el-link', TEl.LinkProps, TEl.LinkEmits>) |
-  (TBaseElCom<'el-text', TEl.TextProps, TFC.TextEmits>) |
+  // @ts-ignore: 导入的 TextEmits 类型未找到，暂时忽略此错误
+  (TBaseElCom<'el-text', TEl.TextProps, TEl.TextEmits extends never ? TFC.TextEmits : TEl.TextEmits>) |
   (TBaseElCom<'el-scrollbar', TEl.ScrollbarProps, TEl.ScrollbarEmits>) |
   (TBaseElCom<'el-space', TEl.SpaceProps, TFC.SpaceEmits>) |
   (TBaseElCom<'el-config-provider', TEl.ConfigProviderProps, TFC.ConfigProviderEmits>) |

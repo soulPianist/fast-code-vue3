@@ -28,7 +28,7 @@ type TDynamicOption = TBaseOption<{
     limit?: number,
     disable?: boolean,
     dynamic?:boolean,
-    type?: string
+    type?: "Object" | "String" | "Number" | "Array"
   },
   item: TOption,
   component: 'fc-list',
