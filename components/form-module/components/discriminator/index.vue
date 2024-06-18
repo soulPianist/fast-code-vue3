@@ -88,7 +88,7 @@ export default {
       })
     },
     resetFields() {
-      this.$refs.fcFormRef && this.$refs.fcFormRef.resetFields()
+      this.$refs.fcFormRef && this.$refs.fcFormRef?.resetFields()
     }
   }
 }

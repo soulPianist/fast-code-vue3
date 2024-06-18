@@ -67,7 +67,7 @@ const searchForm = computed({
 const searchFormRef = ref()
 
 const resetFields = () => {
-  searchFormRef.value.resetFields()
+  searchFormRef.value?.resetFields()
 }
 
 defineExpose({

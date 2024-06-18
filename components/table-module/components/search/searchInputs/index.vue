@@ -69,7 +69,7 @@ const refLoading = ref(false)
 const reset = async () => {
   refLoading.value = true
   try {
-    searchFormRef.value.resetFields()
+    searchFormRef.value?.resetFields()
     await props.search()
   } finally {
     refLoading.value = false
