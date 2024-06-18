@@ -9,6 +9,13 @@
 ## 拓展性
 组件库的拓展性非常强，可以根据自己的需求进行拓展，比如添加新的组件，修改已有组件的样式，添加新的功能等等。
 
+# 安装
+```` javascript
+
+npm install @only_you/fast-code-vue3
+
+````
+
 # 本地文档服务
 ```` js
 npx docs
