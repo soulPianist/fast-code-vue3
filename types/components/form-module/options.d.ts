@@ -24,7 +24,7 @@ type TSlotOption = TBaseOption<{
 type TDynamicOption = TBaseOption<{
   props?: {
     border?: boolean,
-    addTypes?: string,
+    addButtonPositon?: string,
     limit?: number,
     disable?: boolean,
     dynamic?:boolean,

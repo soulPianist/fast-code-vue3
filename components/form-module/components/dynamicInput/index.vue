@@ -2,7 +2,7 @@
   <div :class="'dynamicInput col ' + (border ? 'border' : '')">
     <div v-for="(item, index) in valueCom" :key="index" class="dynamicInput-item">
       <div
-        v-if="addTypes.indexOf('top') !== -1 && index === 0 && dynamic === true"
+        v-if="addButtonPositon.indexOf('top') !== -1 && index === 0 && dynamic === true"
         class="add btns row"
       >
         <span @click="addItem(index)">
@@ -12,7 +12,7 @@
         </span>
       </div>
       <div
-        v-if="addTypes.indexOf('center') !== -1 && index !== 0 && dynamic === true"
+        v-if="addButtonPositon.indexOf('center') !== -1 && index !== 0 && dynamic === true"
         class="add btns row"
       >
         <span @click="addItem(index)">
@@ -37,7 +37,7 @@
       </div>
     </div>
     <div
-      v-if="dynamic === true && addTypes.indexOf('bottom') !== -1"
+      v-if="dynamic === true && addButtonPositon.indexOf('bottom') !== -1"
       class="add btns row"
     >
       <span @click="addItem()">
@@ -60,7 +60,7 @@ export default {
       default: false,
       type: Boolean,
     },
-    addTypes: {
+    addButtonPositon: {
       default: "center bottom",
       type: String,
     },
