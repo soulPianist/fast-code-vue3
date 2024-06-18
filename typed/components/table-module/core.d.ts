@@ -1,6 +1,7 @@
 import type { TtoComputed } from "../../types/util";
 import type { ITableModule, TInputs, TColumns, TActions, TTabs, TLayout } from "../../types/components/table-module/index";
 declare class TableModule implements ITableModule {
+    static baseOptions: TtoComputed<Partial<ITableModule>>;
     getData: (...arg: any[]) => any;
     inputs?: TtoComputed<TInputs>;
     columns?: TtoComputed<TColumns>;
