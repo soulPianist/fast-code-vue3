@@ -12,7 +12,7 @@
 # 安装
 ```` javascript
 
-npm install @only_you/fast-code-vue3 -s
+npm install @only_you/fast-code-vue3 --save
 
 ````
 
