@@ -2,6 +2,7 @@ import type { TObjToComputed, TtoComputed } from "../../types/util";
 import type { IFormModule, TBtn, TForm, THeader, TLayout } from "../../types/components/form-module/index";
 import type { TOption, TOptions } from "../../types/components/form-module/options";
 declare class FormModule implements IFormModule {
+    static baseOptions: TtoComputed<Partial<IFormModule>>;
     options?: TtoComputed<TOptions>;
     layout?: TtoComputed<TLayout>;
     form?: TtoComputed<TForm>;

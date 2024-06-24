@@ -28,13 +28,16 @@ declare const _default: import("vue").DefineComponent<{
         type: ArrayConstructor;
     };
 }, any, {}, {
+    isLimit: () => boolean;
+    valueCom?: undefined;
+} | {
     valueCom: {
         get(): any;
         set(value: any): void;
     };
+    isLimit?: undefined;
 }, {
     init(): void;
-    addItemByLimit(): void;
     delItem(index: any): void;
     addItem(index: any): void;
 }, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
