@@ -6,8 +6,8 @@
         class="add btns row"
       >
         <span @click="addItem(index)">
-          <slot name="addbtnTop">
-            <el-button>添加</el-button>
+          <slot :isLimit="isLimit"  name="addbtnTop">
+            <el-button :disabled="isLimit" >添加</el-button>
           </slot>
         </span>
       </div>
@@ -16,8 +16,8 @@
         class="add btns row"
       >
         <span @click="addItem(index)">
-          <slot name="addbtnCenter">
-            <el-button>添加</el-button>
+          <slot :isLimit="isLimit" name="addbtnCenter">
+            <el-button :disabled="isLimit">添加</el-button>
           </slot>
         </span>
       </div>
@@ -41,8 +41,8 @@
       class="add btns row"
     >
       <span @click="addItem()">
-        <slot name="addbtnBottom">
-          <el-button>添加</el-button>
+        <slot :isLimit="isLimit" name="addbtnBottom">
+          <el-button :disabled="isLimit">添加</el-button>
         </slot>
       </span>
     </div>
@@ -65,7 +65,7 @@ export default {
       type: String,
     },
     limit: {
-      default: 1,
+      default: -1,
       type: Number,
     },
     disable: {
@@ -101,13 +101,21 @@ export default {
   created() {
     this.init();
   },
+  destroyed() {
+    this.valueCom =  void 0;
+  },
+  computed:{
+    isLimit:()=>{
+      if(this.limit < 0){
+        return false
+      }
+      return (this.valueCom?.length || 0) >= this.limit
+    }
+  },
   methods: {
     init() {
-      this.addItemByLimit();
-    },
-    addItemByLimit() {
-      for (let i = 0; i < this.limit; i++) {
-        this.addItem();
+      if(!this.valueCom?.length){
+        addItem(index)
       }
     },
     delItem(index) {
@@ -115,6 +123,9 @@ export default {
       this.$emit("update:modelValue", this.valueCom);
     },
     addItem(index) {
+      if(this.isLimit){
+        return
+      }
       let temp = {};
       if (this.type === "Object") {
         temp = {};
