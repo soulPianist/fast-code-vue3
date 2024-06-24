@@ -67,7 +67,7 @@ export default {
 
   created() {
     if (this.$attrs.component === 'fc-form') {
-      this.valueCom = {}
+      this.valueCom =  this.valueCom || {}
     }
   },
   
