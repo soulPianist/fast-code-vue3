@@ -46,7 +46,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
         label: string;
         prop: string;
         hide?: boolean;
-    }) | (import("../../../../types/FCElement").TBaseElCom<"el-border", any, any> & {
+    }) | (import("../../../../types/FCElement").TBaseElCom<"el-border", import("../../../../types/plus").BorderProps, import("../../../../types/plus").BorderEmits> & {
         label: string;
         prop: string;
         hide?: boolean;
@@ -58,7 +58,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
         label: string;
         prop: string;
         hide?: boolean;
-    }) | (import("../../../../types/FCElement").TBaseElCom<"el-row", import("element-plus").RowProps, any> & {
+    }) | (import("../../../../types/FCElement").TBaseElCom<"el-row", import("element-plus").RowProps, import("../../../../types/plus").RowEmits> & {
         label: string;
         prop: string;
         hide?: boolean;
@@ -68,7 +68,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
         label: string;
         prop: string;
         hide?: boolean;
-    }) | (import("../../../../types/FCElement").TBaseElCom<"el-text", import("element-plus").TextProps, any> & {
+    }) | (import("../../../../types/FCElement").TBaseElCom<"el-text", import("element-plus").TextProps, import("../../../../types/plus").TextEmits> & {
         label: string;
         prop: string;
         hide?: boolean;
@@ -528,8 +528,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
         prop: import("../../../../types/util").TBaseToComputed<string>;
         hide?: import("../../../../types/util").TBaseToComputed<false> | import("../../../../types/util").TBaseToComputed<true>;
     } | {
-        props?: import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/FCElement").TAnyProp>> | import("../../../../types/util").TObjToComputed<Partial<any>>;
-        events?: import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/FCElement").TAnyEvent>> | import("../../../../types/util").TObjToComputed<Partial<any>>;
+        props?: import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/FCElement").TAnyProp>> | import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/plus").BorderProps>>;
+        events?: import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/FCElement").TAnyEvent>> | import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/plus").BorderEmits>>;
         component: import("../../../../types/util").TBaseToComputed<"el-border">;
         label: import("../../../../types/util").TBaseToComputed<string>;
         prop: import("../../../../types/util").TBaseToComputed<string>;
@@ -550,7 +550,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
         hide?: import("../../../../types/util").TBaseToComputed<false> | import("../../../../types/util").TBaseToComputed<true>;
     } | {
         props?: import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/FCElement").TAnyProp>> | import("../../../../types/util").TObjToComputed<Partial<import("element-plus").RowProps>>;
-        events?: import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/FCElement").TAnyEvent>> | import("../../../../types/util").TObjToComputed<Partial<any>>;
+        events?: import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/FCElement").TAnyEvent>> | import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/plus").RowEmits>>;
         component: import("../../../../types/util").TBaseToComputed<"el-row">;
         label: import("../../../../types/util").TBaseToComputed<string>;
         prop: import("../../../../types/util").TBaseToComputed<string>;
@@ -566,7 +566,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
         hide?: import("../../../../types/util").TBaseToComputed<false> | import("../../../../types/util").TBaseToComputed<true>;
     } | {
         props?: import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/FCElement").TAnyProp>> | import("../../../../types/util").TObjToComputed<Partial<import("element-plus").TextProps>>;
-        events?: import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/FCElement").TAnyEvent>> | import("../../../../types/util").TObjToComputed<Partial<any>>;
+        events?: import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/FCElement").TAnyEvent>> | import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/plus").TextEmits>>;
         component: import("../../../../types/util").TBaseToComputed<"el-text">;
         label: import("../../../../types/util").TBaseToComputed<string>;
         prop: import("../../../../types/util").TBaseToComputed<string>;
