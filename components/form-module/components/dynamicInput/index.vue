@@ -94,6 +94,12 @@ export default {
         this.$emit("update:modelValue", value);
       },
     },
+    isLimit:function () {
+      if(this.limit < 0){
+        return false
+      }
+      return (this.valueCom?.length || 0) >= this.limit
+    }
   },
   data() {
     return {};
@@ -103,14 +109,6 @@ export default {
   },
   unmounted() {
     this.valueCom.length = 0;
-  },
-  computed:{
-    isLimit:()=>{
-      if(this.limit < 0){
-        return false
-      }
-      return (this.valueCom?.length || 0) >= this.limit
-    }
   },
   methods: {
     init() {

@@ -28,14 +28,11 @@ declare const _default: import("vue").DefineComponent<{
         type: ArrayConstructor;
     };
 }, any, {}, {
-    isLimit: () => boolean;
-    valueCom?: undefined;
-} | {
     valueCom: {
         get(): any;
         set(value: any): void;
     };
-    isLimit?: undefined;
+    isLimit: () => boolean;
 }, {
     init(): void;
     delItem(index: any): void;
