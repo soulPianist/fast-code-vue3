@@ -43,7 +43,9 @@ export default {
       };
     },
   },
-
+  unmounted() {
+    this.valueCom =  "";
+  },
   methods: {
 
   },

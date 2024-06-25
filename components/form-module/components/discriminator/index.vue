@@ -71,7 +71,9 @@ export default {
     }
   },
 
-
+  unmounted() {
+    this.valueCom =  "";
+  },
   
   computed: {
     valueCom: {
