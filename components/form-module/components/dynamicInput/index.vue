@@ -115,7 +115,7 @@ export default {
   methods: {
     init() {
       if(!this.valueCom?.length){
-        addItem(index)
+        this.addItem(index)
       }
     },
     delItem(index) {
