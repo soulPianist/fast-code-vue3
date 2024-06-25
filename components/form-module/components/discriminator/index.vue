@@ -71,9 +71,7 @@ export default {
     }
   },
 
-  destroyed() {
-    this.valueCom =  void 0;
-  },
+
   
   computed: {
     valueCom: {
