@@ -126,6 +126,9 @@ export default {
       if(this.isLimit){
         return
       }
+      if(!this.valueCom.length){
+        this.valueCom = []
+      }
       let temp = {};
       if (this.type === "Object") {
         temp = {};
