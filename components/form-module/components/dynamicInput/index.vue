@@ -117,8 +117,9 @@ export default {
       }
     },
     delItem(index) {
-      this.valueCom.splice(index, 1);
-      this.$emit("update:modelValue", this.valueCom);
+      let copy = [...this.valueCom]
+      copy.splice(index, 1);
+      this.$emit("update:modelValue", copy);
     },
     addItem(index) {
       if(this.isLimit){
