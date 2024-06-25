@@ -101,9 +101,6 @@ export default {
   created() {
     this.init();
   },
-  destroyed() {
-    this.valueCom =  void 0;
-  },
   computed:{
     isLimit:()=>{
       if(this.limit < 0){

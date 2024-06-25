@@ -70,10 +70,6 @@ export default {
       this.valueCom =  this.valueCom || {}
     }
   },
-
-  destroyed() {
-    this.valueCom =  void 0;
-  },
   
   computed: {
     valueCom: {

@@ -43,9 +43,6 @@ export default {
       };
     },
   },
-  destroyed() {
-    this.valueCom =  void 0;
-  },
   methods: {
 
   },
