@@ -126,7 +126,7 @@ export default {
       if(this.isLimit){
         return
       }
-      if(!this.valueCom.length){
+      if(!this.valueCom?.length){
         this.valueCom = []
       }
       let temp = {};
