@@ -102,7 +102,7 @@ export default {
     this.init();
   },
   unmounted() {
-    this.valueCom =  [];
+    this.valueCom.length = 0;
   },
   computed:{
     isLimit:()=>{
@@ -125,9 +125,6 @@ export default {
     addItem(index) {
       if(this.isLimit){
         return
-      }
-      if(!this.valueCom?.length){
-        this.valueCom = []
       }
       let temp = {};
       if (this.type === "Object") {
