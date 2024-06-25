@@ -102,7 +102,7 @@ export default {
     this.init();
   },
   destroyed() {
-    this.valueCom =  void 0;
+    this.valueCom =  [];
   },
   computed:{
     isLimit:()=>{
