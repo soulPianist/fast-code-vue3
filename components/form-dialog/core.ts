@@ -5,7 +5,11 @@ import lodash from 'lodash'
 
 class FormDialog implements IFormDialog {
   static baseOptions: TtoComputed<Partial<IFormDialog>> = {
-    formConfig: {},
+    formConfig: {
+      layout:{
+        hideBtn:true
+      }
+    },
     dialogConfig: {}
   }
   formConfig?: TtoComputed<FormModule>
@@ -14,7 +18,6 @@ class FormDialog implements IFormDialog {
     lodash.merge(this, FormDialog.baseOptions)
     lodash.merge(this.dialogConfig, options.dialogConfig)
     lodash.merge(this.formConfig, options.formConfig)
-    console.log(this)
   }
 }
 

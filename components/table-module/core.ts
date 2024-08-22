@@ -2,7 +2,14 @@ import type { TtoComputed } from "../../types/util";
 import type { ITableModule, TInputs, TColumns,TActions, TTabs, TLayout } from "../../types/components/table-module/index"
 import lodash from "lodash"
 class TableModule implements ITableModule {
-  static baseOptions: TtoComputed<Partial<ITableModule>> = {}
+  static baseOptions: TtoComputed<Partial<ITableModule>> = {
+    inputs: [],
+    columns: [],
+    tabs: null,
+    actions: [],
+    layout: {},
+    btns: []
+  }
   getData: (...arg: any[]) => any
   inputs?: TtoComputed<TInputs>
   columns?: TtoComputed<TColumns>
@@ -12,13 +19,13 @@ class TableModule implements ITableModule {
   btns?: TtoComputed<TActions> 
   constructor(options: ITableModule) {
     lodash.merge(this, TableModule.baseOptions)
-    lodash.merge(this.getData, options.getData)
     lodash.merge(this.inputs, options.inputs)
     lodash.merge(this.columns, options.columns)
     lodash.merge(this.tabs, options.tabs)
     lodash.merge(this.actions, options.actions)
     lodash.merge(this.layout, options.layout)
     lodash.merge(this.btns, options.btns)
+    this.getData = options.getData
     // this.getData = options.getData
     // this.inputs = options.inputs
     // this.columns = options.columns

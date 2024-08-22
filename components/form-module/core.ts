@@ -5,7 +5,13 @@ import { unref } from "vue";
 import lodash from 'lodash'
 
 class FormModule implements IFormModule {
-  static baseOptions: TtoComputed<Partial<IFormModule>> = {};
+  static baseOptions: TtoComputed<Partial<IFormModule>> = {
+    options:[],
+    layout:{},
+    form:{},
+    btn:{},
+    header:{}
+  };
   options?: TtoComputed<TOptions> = [];
   layout?: TtoComputed<TLayout> = {};
   form?: TtoComputed<TForm> = {};
@@ -20,8 +26,8 @@ class FormModule implements IFormModule {
     lodash.merge(this.form, options.form)
     lodash.merge(this.btn, options.btn)
     lodash.merge(this.header, options.header)
-    lodash.merge(this.submit, options.submit)
-    lodash.merge(this.reset, options.reset)
+    this.submit = options.submit
+    this.reset = options.reset
   }
   getOption(prop: string): TObjToComputed<TOption> | undefined {
     const options = unref(this.options)

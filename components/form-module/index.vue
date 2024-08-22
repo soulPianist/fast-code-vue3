@@ -45,7 +45,7 @@
         </el-form-item>
       </div>
 
-      <div v-if="!layout?.hideBtn" class="btns-style">
+      <div v-if="!hideBtn" class="btns-style">
         <el-form-item label-width="0">
           <el-button v-if="!resetBtn?.hide" v-bind="resetBtn?.props" @click="reset">
             {{ resetBtn?.title }}
@@ -85,6 +85,11 @@ const form = computed(() => {
     props: {},
     events: {}
   }, unref(props.form))
+})
+
+const hideBtn = computed(() => {
+  const action = props.submit || unref(unref(props.btn)?.submit)?.action
+  return unref(props.layout)?.hideBtn || !action
 })
 
 const header = computed(() => {
@@ -132,10 +137,6 @@ const resetBtn = computed(() => {
   })
 })
 
-const resetFields = () => {
-  reset()
-}
-
 const reset = () => {
   resetLoading.value = true
   formRef.value?.resetFields();
@@ -179,6 +180,7 @@ const submitBtn = computed(() => {
     action: props.submit || unref(unref(props.btn)?.submit)?.action
   })
 })
+
 const submit =  () => {
   return new Promise((resolve, reject) => {
     validate((valid: any) => {
