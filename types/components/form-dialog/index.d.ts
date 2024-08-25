@@ -1,5 +1,6 @@
 import type { TtoComputed } from "../../../types/util";
 import * as TEl from 'element-plus'
+import { IFormModule } from "../form-module";
 
 export type TDialogConfig = {
   props?: Partial<TEl.DialogProps>,
@@ -19,11 +20,11 @@ export type TDialogConfig = {
 }
 
 export type TFormDialog = {
-  formConfig?:TtoComputed<FormModule>,
+  formConfig?:TtoComputed<IFormModule>,
   dialogConfig?:TtoComputed<TDialogConfig>
 }
 
 export interface IFormDialog {
-  formConfig?:TtoComputed<FormModule>,
+  formConfig?:TtoComputed<IFormModule>,
   dialogConfig?:TtoComputed<TDialogConfig>
 }
