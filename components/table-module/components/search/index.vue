@@ -16,22 +16,22 @@
           <slot v-bind="scope" :name="`${item?.prop}_input_slot`" />
         </template>
       </SearchInputs>
-      <Btns v-bind="props" v-model="searchForm"></Btns>
+      <FCBtns v-bind="props" v-model="searchForm"></FCBtns>
       <slot name="illustrate"></slot>
-      <Tabs v-bind="props" :search="search" v-model="searchForm"></Tabs>
+      <FCTabs v-bind="props" :search="search" v-model="searchForm"></FCTabs>
       <div v-loading="searchInputsRef?.loading">
         <slot :data="data" name="content"></slot>
       </div>
-      <Pagination v-bind="props" :total="total" v-model="searchForm"></Pagination>
+      <FCPagination v-bind="props" :total="total" v-model="searchForm"></FCPagination>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import Tabs from './tabs/index.vue'
+import FCTabs from './tabs/index.vue'
 import SearchInputs from './searchInputs/index.vue'
-import Btns from './btns/index.vue'
-import Pagination from './pagination/index.vue'
+import FCBtns from './btns/index.vue'
+import FCPagination from './pagination/index.vue'
 import { ref, computed, watch, unref } from 'vue'
 import lodash from 'lodash'
 import type { ITableModule } from '../../../../types/components/table-module/index';

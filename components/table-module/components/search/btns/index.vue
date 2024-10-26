@@ -1,5 +1,5 @@
 <template>
-  <div class="btns">
+  <div v-if="btns.length" class="btns">
     <el-button v-for="(item,index) in btns" :key="index"
      @click="action(unref(item.action) as any,index)"
      :loading="loadings[index]"

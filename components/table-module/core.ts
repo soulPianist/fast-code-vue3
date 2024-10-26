@@ -5,7 +5,7 @@ class TableModule implements ITableModule {
   static baseOptions: TtoComputed<Partial<ITableModule>> = {
     inputs: [],
     columns: [],
-    tabs: null,
+    tabs: {} as any,
     actions: [],
     layout: {},
     btns: []

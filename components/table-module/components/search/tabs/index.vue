@@ -10,6 +10,11 @@
 import { computed, onMounted, unref } from 'vue'
 import type { ITableModule } from '../../../../../types/components/table-module/index';
 import lodash from 'lodash'
+
+const props = defineProps<(ITableModule & {
+  modelValue: (Record<string, any>)
+})>()
+
 const tabPanes = computed(() => {
   return unref(unref(props?.tabs)?.options)?.map(item => {
     return lodash.merge(unref(item), {
@@ -21,10 +26,6 @@ const tabPanes = computed(() => {
   })
 })
 
-const props = defineProps<(ITableModule & {
-  modelValue: (Record<string, any>)
-})>()
-
 const emit = defineEmits(['update:modelValue'])
 const searchForm = computed({
   get() {
@@ -34,6 +35,7 @@ const searchForm = computed({
     emit('update:modelValue', val)
   }
 })
+
 const tabs = computed(() => {
   return unref(props.tabs)
 })

@@ -12,8 +12,8 @@
     <div class="row" v-else>
       <Inputs ref="searchFormRef" v-bind="props" v-model="searchForm">
         <template v-for="item in inputSlots" v-slot:[`${item?.prop}_input_slot`]="scope">
-        <slot v-bind="scope" :name="`${item?.prop}_input_slot`" />
-      </template>
+          <slot v-bind="scope" :name="`${item?.prop}_input_slot`" />
+        </template>
       </Inputs>
       <div class="col searchBtnBox">
         <el-button @click="props.search" :loading="props.loading" type="primary">{{ unref(unref(unref(layout)?.search)?.searchBtn)?.label || '搜索' }}</el-button>
@@ -101,6 +101,7 @@ defineExpose({
   border-left: 1px solid #cccc;
   padding-left: 20px;
   justify-content: space-around;
+  margin:5px 0;
 }
 
 .search-inputs {
