@@ -49,7 +49,7 @@ type TTabs = {
 
 type TActions = Array<{
   label: string,
-  props: Partial<TEl.ButtonProps>,
+  props?: Partial<TEl.ButtonProps>,
   hide?: boolean | ((params: any) => boolean),
   action: (...arg: any[]) => any
 }>
