@@ -12,7 +12,7 @@ declare const _default: import("vue").DefineComponent<Readonly<{
     };
     events: () => {};
     disabledCom: () => (props: any) => any;
-}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<Readonly<{
+}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<Readonly<{
     modelValue?: any;
     item?: any;
 }>>>, {

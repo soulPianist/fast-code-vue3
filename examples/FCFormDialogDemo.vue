@@ -1,6 +1,10 @@
 <template>
   <div class="pages">
-    <FCFormDialog ref="formDialogRef" v-model="form" v-bind="config"></FCFormDialog>
+    <FCFormDialog ref="formDialogRef" v-model="form" v-bind="config">
+      <template v-slot:dataSlot="scope">
+        <el-input v-model="scope.data[scope.prop]" placeholder=""></el-input>
+      </template>
+    </FCFormDialog>
   </div>
 </template>
 <script lang="ts">
@@ -12,13 +16,15 @@ export default {
 import { reactive, ref, computed, onMounted } from 'vue';
 import { FCFormDialog } from '@only_you/fast-code-vue3';
 import FormDialog from '@only_you/fast-code-vue3/components/form-dialog/core';
+import { objRulesBuilder } from '@only_you/fast-code-rules';
+// import objRulesBuilder from '../../libs/fast-code-rules/core/objRulesBuilder';
+// import FCFormDialog from '../../libs/fast-code-vue3/components/form-dialog/index.vue';
+// import FormDialog from '../../libs/fast-code-vue3/components/form-dialog/core.ts';
 
 const formDialogRef = ref<InstanceType<typeof FCFormDialog>>()
-
 const form = reactive({})
-
 const submit = async (data: any) => {
-  // console.log("xxxxxxxxxx", data)
+
 }
 
 onMounted(() => {
@@ -29,25 +35,25 @@ const config = ref(new FormDialog({
   dialogConfig: {},
   formConfig: {
     submit,
-    layout: {
-      card: {
-        props: {
-
-        }
+    form:{
+      props:{
+        rules: objRulesBuilder({
+          "name":{
+            rules:['required'],
+            name:'姓名'
+          }
+        })
       }
+    },
+    layout: {
     },
     options: [
       {
+        prop: 'name',
         component: 'el-input',
-        props: {
-          label: computed(() => {
-            return '名字名字'
-          }),
+        itemProps: {
+          label: 'ddddd',
         },
-        prop: 'ewew',
-        // hide: () => {
-        //   return true
-        // }
       },
       {
         component: 'el-input',

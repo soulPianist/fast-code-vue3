@@ -11,7 +11,7 @@ type TBaseOption<T> = T & {
   bottomText?: string,
   props?:Record<string,any>,
   events?:Record<string,any>,
-  itemProps?:Record<string,any>,
+  itemProps?:Record<string,any>, 
   itemEvents?:Record<string,any>,
   hide?:(...arg:any[])=>any
 }

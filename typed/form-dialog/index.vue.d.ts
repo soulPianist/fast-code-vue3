@@ -11,7 +11,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
     closed: (...args: any[]) => void;
     reseted: (...args: any[]) => void;
     submited: (...args: any[]) => void;
-}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<TFormDialog & {
+}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<TFormDialog & {
     modelValue: Record<string, any>;
 }>>> & {
     "onUpdate:modelValue"?: (...args: any[]) => any;

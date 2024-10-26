@@ -8,7 +8,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
     antiShakeSearch: lodash.DebouncedFunc<() => Promise<void>>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     "update:modelValue": (...args: any[]) => void;
-}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<ITableModule & {
+}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<ITableModule & {
     modelValue: Record<string, any>;
 }>>> & {
     "onUpdate:modelValue"?: (...args: any[]) => any;
@@ -102,10 +102,11 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
         prop: string;
         hide?: boolean;
     }) | (import("../../../../types/FCElement").TBaseElCom<"el-cascader", import("element-plus").CascaderProps, {
-        "update:modelValue": (val: import("element-plus").CascaderValue) => boolean;
-        change: (val: import("element-plus").CascaderValue) => boolean;
+        "update:modelValue": (_: import("element-plus").CascaderValue) => boolean;
+        change: (_: import("element-plus").CascaderValue) => boolean;
         focus: (evt: FocusEvent) => boolean;
         blur: (evt: FocusEvent) => boolean;
+        clear: () => boolean;
         visibleChange: (val: boolean) => boolean;
         expandChange: (val: import("element-plus").CascaderValue) => boolean;
         removeTag: (val: import("element-plus/es/components/cascader-panel/src/node").CascaderNodeValue | import("element-plus/es/components/cascader-panel/src/node").CascaderNodePathValue) => boolean;
@@ -124,8 +125,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
         "update:modelValue": (val: string) => boolean;
         change: (val: string) => boolean;
         activeChange: (val: string) => boolean;
-        focus: (event: FocusEvent) => boolean;
-        blur: (event: FocusEvent) => boolean;
+        focus: (evt: FocusEvent) => boolean;
+        blur: (evt: FocusEvent) => boolean;
     }> & {
         label: string;
         prop: string;
@@ -251,8 +252,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
         prop: string;
         hide?: boolean;
     }) | (import("../../../../types/FCElement").TBaseElCom<"el-collapse", import("element-plus").CollapseProps, {
-        "update:modelValue": (value: import("element-plus").CollapseModelValue) => "string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function";
-        change: (value: import("element-plus").CollapseModelValue) => "string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function";
+        "update:modelValue": (value: import("element-plus").CollapseModelValue) => boolean;
+        change: (value: import("element-plus").CollapseModelValue) => boolean;
     }> & {
         label: string;
         prop: string;
@@ -283,6 +284,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
         'update:current-page': (val: number) => boolean;
         'update:page-size': (val: number) => boolean;
         'size-change': (val: number) => boolean;
+        change: (currentPage: number, pageSize: number) => boolean;
         'current-change': (val: number) => boolean;
         'prev-click': (val: number) => boolean;
         'next-click': (val: number) => boolean;
@@ -615,10 +617,11 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
     } | {
         props?: import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/FCElement").TAnyProp>> | import("../../../../types/util").TObjToComputed<Partial<import("element-plus").CascaderProps>>;
         events?: import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/FCElement").TAnyEvent>> | import("../../../../types/util").TObjToComputed<Partial<{
-            "update:modelValue": (val: import("element-plus").CascaderValue) => boolean;
-            change: (val: import("element-plus").CascaderValue) => boolean;
+            "update:modelValue": (_: import("element-plus").CascaderValue) => boolean;
+            change: (_: import("element-plus").CascaderValue) => boolean;
             focus: (evt: FocusEvent) => boolean;
             blur: (evt: FocusEvent) => boolean;
+            clear: () => boolean;
             visibleChange: (val: boolean) => boolean;
             expandChange: (val: import("element-plus").CascaderValue) => boolean;
             removeTag: (val: import("element-plus/es/components/cascader-panel/src/node").CascaderNodeValue | import("element-plus/es/components/cascader-panel/src/node").CascaderNodePathValue) => boolean;
@@ -643,8 +646,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
             "update:modelValue": (val: string) => boolean;
             change: (val: string) => boolean;
             activeChange: (val: string) => boolean;
-            focus: (event: FocusEvent) => boolean;
-            blur: (event: FocusEvent) => boolean;
+            focus: (evt: FocusEvent) => boolean;
+            blur: (evt: FocusEvent) => boolean;
         }>>;
         component: import("../../../../types/util").TBaseToComputed<"el-color-picker">;
         label: import("../../../../types/util").TBaseToComputed<string>;
@@ -830,8 +833,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
     } | {
         props?: import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/FCElement").TAnyProp>> | import("../../../../types/util").TObjToComputed<Partial<import("element-plus").CollapseProps>>;
         events?: import("../../../../types/util").TObjToComputed<Partial<import("../../../../types/FCElement").TAnyEvent>> | import("../../../../types/util").TObjToComputed<Partial<{
-            "update:modelValue": (value: import("element-plus").CollapseModelValue) => "string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function";
-            change: (value: import("element-plus").CollapseModelValue) => "string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function";
+            "update:modelValue": (value: import("element-plus").CollapseModelValue) => boolean;
+            change: (value: import("element-plus").CollapseModelValue) => boolean;
         }>>;
         component: import("../../../../types/util").TBaseToComputed<"el-collapse">;
         label: import("../../../../types/util").TBaseToComputed<string>;
@@ -877,6 +880,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
             'update:current-page': (val: number) => boolean;
             'update:page-size': (val: number) => boolean;
             'size-change': (val: number) => boolean;
+            change: (currentPage: number, pageSize: number) => boolean;
             'current-change': (val: number) => boolean;
             'prev-click': (val: number) => boolean;
             'next-click': (val: number) => boolean;

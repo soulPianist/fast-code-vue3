@@ -29,7 +29,7 @@
           <span @click="delItem(index)">
             <slot name="deleteBtn">
               <el-button>
-                <el-icon><Delete /></el-icon>
+                <el-icon>删除</el-icon>
               </el-button>
             </slot>
           </span>
@@ -49,12 +49,8 @@
   </div>
 </template>
 <script>
-import { Delete } from "@element-plus/icons-vue";
 export default {
   name: "fc-dynamic-input",
-  components: {
-    Delete,
-  },
   props: {
     border: {
       default: false,

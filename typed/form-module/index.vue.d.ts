@@ -7,7 +7,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
     reset: () => void;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     "update:modelValue": (...args: any[]) => void;
-}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<IFormModule & {
+}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<IFormModule & {
     modelValue: Record<string, any>;
 }>>> & {
     "onUpdate:modelValue"?: (...args: any[]) => any;

@@ -3,7 +3,7 @@ declare const _default: import("vue").DefineComponent<__VLS_TypePropsToRuntimePr
     modelValue: (Record<string, any>);
 }>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     "update:modelValue": (...args: any[]) => void;
-}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<ITableModule & {
+}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<ITableModule & {
     modelValue: (Record<string, any>);
 }>>> & {
     "onUpdate:modelValue"?: (...args: any[]) => any;

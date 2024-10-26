@@ -1,7 +1,7 @@
 import type { ITableModule } from '../../../../../types/components/table-module/index';
 declare const _default: import("vue").DefineComponent<__VLS_TypePropsToRuntimeProps<ITableModule & {
     modelValue: (Record<string, any>);
-}>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<ITableModule & {
+}>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<ITableModule & {
     modelValue: (Record<string, any>);
 }>>>, {}, {}>;
 export default _default;
