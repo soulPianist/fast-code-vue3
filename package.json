@@ -54,5 +54,5 @@
     "docs": "./bin/docs.js"
   },
   "type": "module",
-  "version": "0.0.142"
+  "version": "0.0.143"
 }
