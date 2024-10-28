@@ -83,7 +83,7 @@ defineExpose({
   --inputNum: 5;
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(var(--inputNum), auto);
+  grid-template-columns: repeat(var(--inputNum), 1fr);
   /* grid-gap: 10px; */
 }
 .inputs-content :deep(.el-form-item__content) {
