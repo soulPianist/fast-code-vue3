@@ -1,11 +1,5 @@
 <template>
-  <component
-    :is="$attrs.component"
-    class="inputCom"
-    v-bind="props"
-    v-on="events"
-    v-model.trim="value"
-  >
+  <component :is="$attrs.component" class="inputCom" v-bind="props" v-on="events" v-model.trim="value">
   </component>
 </template>
 <script>
@@ -15,27 +9,26 @@ export default {
   data() {
     return {};
   },
-  props: ["modelValue", "item"],
+  props: ['modelValue', 'item'],
   computed: {
     value: {
       get() {
-        return this.modelValue;
+        return this.modelValue
       },
       set(value) {
-        this.$emit("update:modelValue", value);
-      },
+        this.$emit('update:modelValue', value)
+      }
     },
     props: function () {
-      return lodash.merge(
-        {
-          clearable: true,
-          disabled: this.disabledCom(this.$attrs.props),
-        },
-        this.$attrs.props
-      );
+      return lodash.merge({
+        clearable: true,
+        disabled:this.disabledCom(this.$attrs.props)
+      }, this.$attrs.props)
     },
     events: function () {
-      return lodash.merge({}, this.$attrs.events);
+      return lodash.merge({
+
+      }, this.$attrs.events)
     },
     disabledCom: function () {
       return (props) => {
@@ -46,17 +39,16 @@ export default {
         if (typeof disabled === "boolean") {
           return disabled;
         }
-        if (typeof disabled === "function") {
-          return disabled(this.value);
-        }
-        return false;
+        return disabled(this.value);
       };
     },
   },
   unmounted() {
-    this.valueCom = "";
+    this.valueCom =  "";
   },
-  methods: {},
+  methods: {
+
+  },
 };
 </script>
 <style scoped>
@@ -65,7 +57,7 @@ export default {
   display: flex;
 }
 
-.inputCom > :deep(div) {
+.inputCom> :deep(div) {
   width: 100%;
 }
 </style>

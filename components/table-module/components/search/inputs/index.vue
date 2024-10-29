@@ -7,15 +7,26 @@
       :model="searchForm"
       v-on="unref(unref(unref(props?.layout)?.search)?.form)?.events || {}"
     >
-      <div class="inputs-content" :style="{ '--inputNum': unref(unref(unref(unref(props?.layout)?.search)?.form)?.cols) || 5 }">
+      <div
+        class="inputs-content"
+        :style="{
+          '--inputNum':
+            unref(unref(unref(unref(props?.layout)?.search)?.form)?.cols) || 5,
+        }"
+      >
         <el-form-item
           v-for="(item, index) in inputs"
           :key="index"
           :prop="item.prop"
           :label="item.label"
         >
-          <div style="width:100%">
-            <slot :searchForm="searchForm" :config="item" :prop="item.prop" :name="`${item?.prop}_input_slot`">
+          <div style="width: 100%">
+            <slot
+              :searchForm="searchForm"
+              :config="item"
+              :prop="item.prop"
+              :name="`${item?.prop}`"
+            >
               <component
                 :is="item.component"
                 v-model.trim="searchForm[item.prop as string]"
@@ -32,51 +43,56 @@
   </div>
 </template>
 <script setup lang="ts">
-import type { ITableModule } from '../../../../../types/components/table-module/index';
-import { computed, unref , ref } from 'vue'
-import lodash from 'lodash'
-const props = defineProps<(ITableModule & {
-  modelValue: Record<string,any>
-})>()
+import type { ITableModule } from "../../../../../types/components/table-module/index";
+import { computed, unref, ref } from "vue";
+import lodash from "lodash";
+const props = defineProps<
+  ITableModule & {
+    modelValue: Record<string, any>;
+  }
+>();
 
-const inputs = computed(()=>{
-  return unref(props.inputs)?.filter(item=>{
-    return !unref(unref(item).hide)
-  }).map(item=>{
-    return lodash.merge(unref(item), {
-      props:{
-        clearable:true
-      },
-      events:{
+const inputs = computed(() => {
+  return unref(props.inputs)
+    ?.filter((item) => {
+      return !unref(unref(item).hide);
+    })
+    .map((item) => {
+      return lodash.merge(
+        unref(item),
+        {
+          props: {
+            clearable: true,
+          },
+          events: {},
+        },
+        { props: unref(unref(item) as any)?.props }
+      );
+    });
+});
 
-      }
-    }, { props:(unref(unref(item) as any)?.props) })
-  })
-})
-
-const emit = defineEmits(['update:modelValue'])
+const emit = defineEmits(["update:modelValue"]);
 const searchForm = computed({
   get() {
-    return props.modelValue
+    return props.modelValue;
   },
   set(val) {
-    emit('update:modelValue', val)
-  }
-})
+    emit("update:modelValue", val);
+  },
+});
 
-const searchFormRef = ref()
+const searchFormRef = ref();
 
 const resetFields = () => {
-  searchFormRef.value?.resetFields()
-}
+  searchFormRef.value?.resetFields();
+};
 
 defineExpose({
-  resetFields
-})
-
+  resetFields,
+});
 </script>
 <style scoped>
-.inputs{
+.inputs {
   flex: 1;
 }
 .inputs-content {
@@ -92,6 +108,6 @@ defineExpose({
 </style>
 <script lang="ts">
 export default {
-  name: 'fc-table-inputs'
-}
+  name: "fc-table-inputs",
+};
 </script>

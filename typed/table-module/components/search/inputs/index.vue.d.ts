@@ -1,4 +1,4 @@
-import type { ITableModule } from '../../../../../types/components/table-module/index';
+import type { ITableModule } from "../../../../../types/components/table-module/index";
 declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__VLS_TypePropsToRuntimeProps<ITableModule & {
     modelValue: Record<string, any>;
 }>, {
@@ -9,7 +9,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
     modelValue: Record<string, any>;
 }>>> & {
     "onUpdate:modelValue"?: (...args: any[]) => any;
-}, {}, {}>, Partial<Record<`${string}_input_slot`, (_: {
+}, {}, {}>, Partial<Record<string, (_: {
     searchForm: Record<string, any>;
     config: ((import("../../../../../types/FCElement").TBaseElCom<"el-affix", import("element-plus").AffixProps, {
         scroll: ({ scrollTop, fixed }: {

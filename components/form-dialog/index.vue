@@ -1,15 +1,18 @@
 <template>
-  <el-dialog class="dialog" v-bind="dialogProps" v-model="isShow" v-on="dialogEvents">
+  <el-dialog
+    v-if="isShow"
+    class="fc-dialog"
+    v-bind="dialogProps"
+    v-model="isShow"
+    v-on="dialogEvents"
+  >
     <template #header>
       <slot name="header"></slot>
     </template>
     <template #default>
       <slot name="default">
-        <FCForm ref="fcFormRef"
-          v-model="valueCom"
-          v-bind="formConfig"
-        >
-          <template v-for="(item) in slotComponents" v-slot:[item.slotName]="scope">
+        <FCForm ref="fcFormRef" v-model="valueCom" v-bind="formConfig">
+          <template v-for="item in slotComponents" v-slot:[item.slotName]="scope">
             <slot :name="item.slotName" v-bind="scope"></slot>
           </template>
           <template #addbtnTop>
@@ -29,108 +32,141 @@
     </template>
     <template v-slot:footer>
       <slot name="footer">
-        <el-button v-if="!unref(unref(resetBtn)?.hide)" v-bind="unref(unref(resetBtn)?.props)" @click="reset">{{ unref(unref(resetBtn)?.label) || "重置" }}</el-button>
-        <el-button v-if="!unref(unref(submitBtn)?.hide)" v-bind="unref(unref(submitBtn)?.props)" @click="submit">{{ unref(unref(submitBtn)?.label) || "确定" }}</el-button>
+        <el-button
+          v-if="!unref(unref(resetBtn)?.hide)"
+          v-bind="unref(unref(resetBtn)?.props)"
+          :loading="resetLoading"
+          @click="reset"
+          >{{ unref(unref(resetBtn)?.label) || "重置" }}</el-button
+        >
+        <el-button
+          v-if="!unref(unref(submitBtn)?.hide)"
+          v-bind="unref(unref(submitBtn)?.props)"
+          :loading="submitLoading"
+          @click="submit"
+          >{{ unref(unref(submitBtn)?.label) || "确定" }}</el-button
+        >
       </slot>
     </template>
   </el-dialog>
 </template>
 <script setup lang="ts">
-
-import { computed, ref, unref } from 'vue';
-import lodash from "lodash"
+import { computed, ref, unref } from "vue";
+import lodash from "lodash";
 import type { TFormModule } from "../../types/components/form-module/index";
 import type { TFormDialog } from "../../types/components/form-dialog/index";
-import FCForm from '../form-module/index.vue'
+import FCForm from "../form-module/index.vue";
 defineOptions({
-  name: "form-dialog"
-})
+  name: "form-dialog",
+});
 
-const props = defineProps<(TFormDialog & {
-  modelValue: Record<string, any>
-})>()
+const props = defineProps<
+  TFormDialog & {
+    modelValue: Record<string, any>;
+  }
+>();
 
-const isShow = ref(false)
+const isShow = ref(false);
 
-const emit = defineEmits(['update:modelValue','closed','reseted','submited'])
+const emit = defineEmits(["update:modelValue", "closed", "reseted", "submited"]);
 const valueCom = computed({
   get() {
-    return props.modelValue
+    return props.modelValue;
   },
   set(value) {
-    emit('update:modelValue', value)
-  }
-})
+    emit("update:modelValue", value);
+  },
+});
 
-const fcFormRef = ref<InstanceType<typeof FCForm>>()
+const fcFormRef = ref<InstanceType<typeof FCForm>>();
 
 const formConfig = computed(() => {
-  return unref(unref(props.formConfig))
-})
+  return unref(unref(props.formConfig));
+});
 
+const resetLoading = ref(false);
+const submitLoading = ref(false);
+const reset = () => {
+  resetLoading.value = true;
+  try {
+    fcFormRef.value?.reset();
+    emit("reseted");
+  } finally {
+    resetLoading.value = false;
+  }
+};
 
-const reset = ()=>{
-  fcFormRef.value?.reset()
-  emit('reseted')
-}
+const submit = async () => {
+  submitLoading.value = true;
+  try {
+    await fcFormRef.value?.submit();
+    emit("submited", valueCom.value);
+    close();
+  } finally {
+    submitLoading.value = false;
+  }
+};
 
-const submit = async ()=>{
-  await fcFormRef.value?.submit()
-  emit('submited',valueCom.value)
-  close()
-}
-
-const open = async (data:any)=>{
-  valueCom.value = lodash.cloneDeep(data)
+const open = async (data: any = {}) => {
+  valueCom.value = lodash.cloneDeep(data);
   isShow.value = true;
-}
+};
 
-const close = ()=>{
-  valueCom.value = {}
-  isShow.value = false
-  emit('closed')
-}
+const close = () => {
+  valueCom.value = {};
+  isShow.value = false;
+  emit("closed");
+};
 
 const dialogProps = computed(() => {
-  return lodash.merge({
-    title:valueCom.value?.id ? '编辑' : '新增'
-  }, unref(unref(props.dialogConfig)?.props))
-})
+  return lodash.merge(
+    {
+      title: valueCom.value?.id ? "编辑" : "新增",
+    },
+    unref(unref(props.dialogConfig)?.props)
+  );
+});
 
 const resetBtn = computed(() => {
-  return unref(unref(props.dialogConfig)?.resetBtn)
-})
+  return unref(unref(props.dialogConfig)?.resetBtn);
+});
 
 const submitBtn = computed(() => {
-  const _props:any = {
-    type:'primary'
-  }
-  return lodash.merge({
-    props: _props
-  }, unref(unref(props.dialogConfig)?.submitBtn))
-})
+  const _props: any = {
+    type: "primary",
+  };
+  return lodash.merge(
+    {
+      props: _props,
+    },
+    unref(unref(props.dialogConfig)?.submitBtn)
+  );
+});
 
 const dialogEvents = computed(() => {
-  return lodash.merge({
-    close
-  }, unref(unref(props.dialogConfig)?.events))
-})
+  return lodash.merge(
+    {
+      close,
+    },
+    unref(unref(props.dialogConfig)?.events)
+  );
+});
 
 const slotComponents = computed(() => {
-  return unref((unref(props.formConfig) as TFormModule)?.options)?.map(item=>{
-    return unref(item)
-  }).filter((item:any)=>{
-    return item?.slotName
-  })
-}) as any
+  return unref((unref(props.formConfig) as TFormModule)?.options)
+    ?.map((item) => {
+      return unref(item);
+    })
+    .filter((item: any) => {
+      return item?.slotName;
+    });
+}) as any;
 
 defineExpose({
   open,
   close,
   reset,
-  submit
-})
+  submit,
+});
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>

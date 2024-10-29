@@ -2,7 +2,7 @@ import type { TFormDialog } from "../../types/components/form-dialog/index";
 declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__VLS_TypePropsToRuntimeProps<TFormDialog & {
     modelValue: Record<string, any>;
 }>, {
-    open: (data: any) => Promise<void>;
+    open: (data?: any) => Promise<void>;
     close: () => void;
     reset: () => void;
     submit: () => Promise<void>;

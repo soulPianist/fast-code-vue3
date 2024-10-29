@@ -1,7 +1,15 @@
 <template>
-  <el-card class="box-card" v-bind="lodash.merge({
-    shadow:'never'
-  },unref(unref(layout.card)?.props))" >
+  <el-card
+    class="box-card"
+    v-bind="
+      lodash.merge(
+        {
+          shadow: 'never',
+        },
+        unref(unref(layout.card)?.props)
+      )
+    "
+  >
     <template v-if="header?.title" #header>
       <slot name="header">
         <div v-if="header?.title" class="box-card-header">
@@ -9,23 +17,48 @@
         </div>
       </slot>
     </template>
-    <el-form ref="formRef" v-bind="form?.props" v-on="form?.events" :model="props.modelValue">
-      <div :style="{
-      'grid-gap': '5px',
-      'grid-template-columns':
-        'repeat(' + layout?.cols + ',1fr)',
-    }" class="form-content">
-        <el-form-item v-for="item in (options as any)" :key="item.prop" v-bind="item.itemProps" :prop="item.prop"
-          class="form-item" :flag="item.prop + 'Flag'">
+    <el-form
+      ref="formRef"
+      v-bind="form?.props"
+      v-on="form?.events"
+      :model="props.modelValue"
+    >
+      <div
+        :style="{
+          'grid-gap': '5px',
+          'grid-template-columns': 'repeat(' + layout?.cols + ',1fr)',
+        }"
+        class="form-content"
+      >
+        <el-form-item
+          v-for="item in (options as any)"
+          :key="item.prop"
+          v-bind="item.itemProps"
+          :prop="item.prop"
+          class="form-item"
+          :flag="item.prop + 'Flag'"
+        >
           <span class="input-top input-text-tip">{{ item.topText }}</span>
-          <slot v-if="item.component === 'slot'" :ref="(e: any) => {
-      setRef(item.prop, e)
-    }" :data="valueCom" :prop="item.prop" :name="item.slotName" />
+          <slot
+            v-if="item.component === 'slot'"
+            :ref="(e: any) => {
+              setRef(item.prop, e)
+            }"
+            :data="valueCom"
+            :prop="item.prop"
+            :name="item.slotName"
+          />
           <div v-else class="input-row">
             <span class="input-befor input-text-tip">{{ item.beforText }}</span>
-            <FCDiscriminator :ref="(e: any) => {
+            <FCDiscriminator
+              :ref="(e: any) => {
               setRef(item.prop, e)
-            }" v-model="valueCom[item.prop]" v-if="valueCom" v-bind="item" class="input-style input-row">
+            }"
+              v-model="valueCom[item.prop]"
+              v-if="valueCom"
+              v-bind="item"
+              class="input-style input-row"
+            >
               <template #addbtnTop>
                 <slot name="addbtnTop" />
               </template>
@@ -60,143 +93,173 @@
 </template>
 
 <script lang="ts" setup>
-import lodash from 'lodash';
-import { computed, ref, unref } from 'vue';
-import FCDiscriminator from './components/discriminator/index.vue'
+import lodash from "lodash";
+import { computed, ref, unref } from "vue";
+import FCDiscriminator from "./components/discriminator/index.vue";
 import type { IFormModule } from "../../types/components/form-module/index";
 defineOptions({
-  name: "form-module"
-})
-const props = defineProps<(IFormModule & {
-  modelValue: (Record<string, any>)
-})>()
+  name: "form-module",
+});
+const props = defineProps<
+  IFormModule & {
+    modelValue: Record<string, any>;
+  }
+>();
 
-const formRef = ref()
-const emit = defineEmits(['update:modelValue'])
+const formRef = ref();
+const emit = defineEmits(["update:modelValue"]);
 const valueCom = computed({
   get: () => props.modelValue,
   set: (val) => {
-    emit('update:modelValue', val)
-  }
-})
+    emit("update:modelValue", val);
+  },
+});
 
 const form = computed(() => {
-  return lodash.merge({
-    props: {},
-    events: {}
-  }, unref(props.form))
-})
+  return lodash.merge(
+    {
+      props: {},
+      events: {},
+    },
+    unref(props.form)
+  );
+});
 
 const hideBtn = computed(() => {
-  const action = props.submit || unref(unref(props.btn)?.submit)?.action
-  return unref(props.layout)?.hideBtn || !action
-})
+  const action = props.submit || unref(unref(props.btn)?.submit)?.action;
+  return unref(props.layout)?.hideBtn || !action;
+});
 
 const header = computed(() => {
-  return lodash.merge({
-    title: ''
-  }, unref(props.header))
-})
+  return lodash.merge(
+    {
+      title: "",
+    },
+    unref(props.header)
+  );
+});
 
 const options = computed(() => {
   if (!unref(props.options)?.length) {
-    return []
+    return [];
   }
-  return unref(props?.options)?.filter((data) => {
-    return !unref(unref(data).hide)
-  }).map(item=>{
-    return lodash.merge({
-      itemProps:{
-        label : unref(unref(item)?.label)
-      }
-    },unref(item))
-  })
-})
+  return unref(props?.options)
+    ?.filter((data) => {
+      return !unref(unref(data).hide);
+    })
+    .map((item) => {
+      return lodash.merge(
+        {
+          itemProps: {
+            label: unref(unref(item)?.label),
+          },
+        },
+        unref(item)
+      );
+    });
+});
 
 const layout = computed(() => {
-  return lodash.merge({
-    cols: 1
-  }, unref(props?.layout))
-})
+  return lodash.merge(
+    {
+      cols: 1,
+    },
+    unref(props?.layout)
+  );
+});
 
 const slotOptions = computed(() => {
-  return options.value?.filter((item) => unref(unref(item).component) === 'slot')
-})
+  return options.value?.filter((item) => unref(unref(item).component) === "slot");
+});
 
-const resetLoading = ref(false)
+const resetLoading = ref(false);
 const resetBtn = computed(() => {
-  return lodash.merge({
-    title: '重置',
-    hide: false,
-    props: {
-      plain: true,
-      loading: resetLoading.value
+  return lodash.merge(
+    {
+      title: "重置",
+      hide: false,
+      props: {
+        plain: true,
+        loading: resetLoading.value,
+      },
     },
-  }, unref(props.btn)?.reset, {
-    action: props.reset || unref(unref(props.btn)?.reset)?.action
-  })
-})
+    unref(props.btn)?.reset,
+    {
+      action: props.reset || unref(unref(props.btn)?.reset)?.action,
+    }
+  );
+});
 
 const reset = () => {
-  resetLoading.value = true
+  resetLoading.value = true;
   formRef.value?.resetFields();
   optionRefs.value?.forEach((item: any) => {
-    item?.resetFields()
-  })
-  resetSoltOptions()
+    item?.resetFields();
+  });
+  resetSoltOptions();
   if (resetBtn.value?.action) {
     (resetBtn.value as any)?.action();
   }
-  resetLoading.value = false
-}
+  resetLoading.value = false;
+};
 
 const resetSoltOptions = () => {
   slotOptions.value?.forEach((item: any) => {
     if (item?.resetFields) {
-      item?.resetFields()
+      item?.resetFields();
     } else {
-      valueCom.value[item.prop] = item.defaultValue
-    }
-  })
-}
-resetSoltOptions()
-
-const optionRefs = ref<Map<string, any>>(new Map())
-const setRef = (prop: string, el: any) => {
-  optionRefs.value.set(prop, el)
-}
-
-const submitLoading = ref(false)
-const submitBtn = computed(() => {
-  return lodash.merge({
-    hide: false,
-    title: props.modelValue?.id ? '修改' : '新增',
-    props: {
-      type: "primary",
-      plain: true,
-      loading: submitLoading.value
-    },
-  }, unref(props.btn)?.submit, {
-    action: props.submit || unref(unref(props.btn)?.submit)?.action
-  })
-})
-
-const submit =  () => {
-  return new Promise((resolve, reject) => {
-    validate((valid: any) => {
-    if (valid) {
-      submitLoading.value = true
-      if (!submitBtn.value?.action) {
-        submitLoading.value = false
-        throw new Error('请重写submit方法')
-      }
-       (submitBtn.value as any)?.action(props.modelValue).then(resolve).catch(reject).finally(() => {
-        submitLoading.value = false
-      });
+      valueCom.value[item.prop] = valueCom.value[item.prop] || item.defaultValue;
     }
   });
-  })
-}
+};
+resetSoltOptions();
+
+const optionRefs = ref<Map<string, any>>(new Map());
+const setRef = (prop: string, el: any) => {
+  optionRefs.value.set(prop, el);
+};
+
+const submitLoading = ref(false);
+const submitBtn = computed(() => {
+  return lodash.merge(
+    {
+      hide: false,
+      title: props.modelValue?.id ? "修改" : "新增",
+      props: {
+        type: "primary",
+        plain: true,
+        loading: submitLoading.value,
+      },
+    },
+    unref(props.btn)?.submit,
+    {
+      action: props.submit || unref(unref(props.btn)?.submit)?.action,
+    }
+  );
+});
+
+const submit = () => {
+  return new Promise((resolve, reject) => {
+    validate(async (valid: any) => {
+      if (valid) {
+        submitLoading.value = true;
+        if (!submitBtn.value?.action) {
+          submitLoading.value = false;
+          reject("请重写submit方法!");
+        }
+        await (submitBtn.value as any)
+          ?.action(props.modelValue)
+          .then(resolve)
+          .catch(reject)
+          .finally(() => {
+            submitLoading.value = false;
+          });
+      } else {
+        reject("表单验证失败!");
+      }
+    });
+  });
+};
 const validate = (callback: Function) => {
   formRef.value.validate((valid: any) => {
     let res = true;
@@ -209,17 +272,16 @@ const validate = (callback: Function) => {
           res = false;
         }
       });
-    })
+    });
     callback(res);
   });
-}
+};
 
 defineExpose({
   validate,
   submit,
-  reset
-})
-
+  reset,
+});
 </script>
 <style scoped lang="scss">
 .form-content {
