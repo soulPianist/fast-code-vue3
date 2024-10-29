@@ -112,18 +112,19 @@ const actionLoadings = ref(
   }
 );
 const runAction = (action: Function, scope: any, $index: number, index: number) => {
-  actionLoadings.value = {
-    [$index]: {
-      [index]: true,
-    },
-  };
+  if(actionLoadings.value[$index]){
+    actionLoadings.value[$index][index]=true
+  }else{
+    actionLoadings.value[$index]={}
+    actionLoadings.value[$index][index] = true;
+  }
   const pro = action(scope);
   try {
     pro.finally(() => {
-      actionLoadings.value = {};
+      actionLoadings.value[$index][index] = false;
     });
   } catch (err) {
-    actionLoadings.value = {};
+    actionLoadings.value[$index][index] = false;
   }
 };
 </script>
