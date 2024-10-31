@@ -5,6 +5,7 @@
       v-bind="unref(layout?.table)?.props || {}"
       :data="props.data"
       style="width: 100%"
+      ref='tableRef'
     >
       <template v-for="item in columns" :key="item.key">
         <el-table-column v-if="item.slotName" v-bind="item.props">
@@ -59,6 +60,12 @@ const props = defineProps<
     pageLoading: boolean;
   }
 >();
+
+const tableRef = ref()
+
+defineExpose({
+  tableRef
+})
 
 const hidePart = (actions: Array<any>, scope: any) => {
   const res = unref(actions).filter((action) => {

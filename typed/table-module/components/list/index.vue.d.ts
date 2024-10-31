@@ -2,7 +2,9 @@ import type { ITableModule } from "../../../../types/components/table-module/ind
 declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__VLS_TypePropsToRuntimeProps<ITableModule & {
     data: Array<any>;
     pageLoading: boolean;
-}>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<ITableModule & {
+}>, {
+    tableRef: import("vue").Ref<any>;
+}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<ITableModule & {
     data: Array<any>;
     pageLoading: boolean;
 }>>>, {}, {}>, Partial<Record<any, (_: any) => any>> & {

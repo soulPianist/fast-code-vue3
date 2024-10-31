@@ -7,6 +7,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
     search: () => Promise<void>;
     reset: () => Promise<void>;
     antiShakeSearch: () => void;
+    listRef: import("vue").Ref<any>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     "update:modelValue": (...args: any[]) => void;
 }, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<ITableModule & {

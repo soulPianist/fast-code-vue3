@@ -27,6 +27,7 @@
       </template>
       <template #content="scope">
         <List
+          ref="listRef"
           :pageLoading="pageLoading"
           v-bind="props"
           :data="scope.data"
@@ -124,11 +125,13 @@ onMounted(() => {
   init();
 });
 
+const listRef = ref();
 defineExpose({
   setStatus,
   search,
   reset,
   antiShakeSearch,
+  listRef
 });
 
 defineOptions({

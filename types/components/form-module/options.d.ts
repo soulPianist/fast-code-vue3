@@ -1,5 +1,5 @@
 import type { TElComponent } from "../../FCElement"
-import type { TFormModule } from "./index.d.ts"
+import type { TFormModule } from "./index"
 
 
 type TBaseOption<T> = T & {
@@ -11,7 +11,7 @@ type TBaseOption<T> = T & {
   bottomText?: string,
   props?:Record<string,any>,
   events?:Record<string,any>,
-  itemProps?:Record<string,any>, 
+  itemProps?:Record<string,any>,
   itemEvents?:Record<string,any>,
   hide?:(...arg:any[])=>any
 }
