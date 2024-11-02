@@ -86,10 +86,10 @@ const formConfig = computed(() => {
 
 const resetLoading = ref(false);
 const submitLoading = ref(false);
-const reset = () => {
+const reset = async () => {
   resetLoading.value = true;
   try {
-    fcFormRef.value?.reset();
+    await fcFormRef.value?.reset();
     emit("reseted");
   } finally {
     resetLoading.value = false;

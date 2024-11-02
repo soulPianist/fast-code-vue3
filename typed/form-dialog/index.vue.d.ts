@@ -4,7 +4,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
 }>, {
     open: (data?: any) => Promise<void>;
     close: () => void;
-    reset: () => void;
+    reset: () => Promise<void>;
     submit: () => Promise<void>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     "update:modelValue": (...args: any[]) => void;

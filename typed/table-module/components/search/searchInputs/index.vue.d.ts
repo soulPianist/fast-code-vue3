@@ -1,6 +1,6 @@
-import type { ITableModule } from '../../../../../types/components/table-module/index';
+import type { ITableModule } from "../../../../../types/components/table-module/index";
 declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__VLS_TypePropsToRuntimeProps<ITableModule & {
-    modelValue: (Record<string, any>);
+    modelValue: Record<string, any>;
     search: (...arg: any[]) => Promise<any>;
     loading: boolean;
 }>, {
@@ -8,12 +8,12 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     "update:modelValue": (...args: any[]) => void;
 }, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<ITableModule & {
-    modelValue: (Record<string, any>);
+    modelValue: Record<string, any>;
     search: (...arg: any[]) => Promise<any>;
     loading: boolean;
 }>>> & {
     "onUpdate:modelValue"?: (...args: any[]) => any;
-}, {}, {}>, Partial<Record<`${any}_input_slot`, (_: {
+}, {}, {}>, Partial<Record<`${any}`, (_: {
     searchForm: Record<string, any>;
     config: ((import("../../../../../types/FCElement").TBaseElCom<"el-affix", import("element-plus").AffixProps, {
         scroll: ({ scrollTop, fixed }: {
@@ -1185,7 +1185,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
         props: any;
     };
     prop: import("../../../../../types/util").TBaseToComputed<string>;
-}) => any>> & Partial<Record<`${any}_input_slot`, (_: {
+}) => any>> & Partial<Record<`${any}`, (_: {
     searchForm: Record<string, any>;
     config: ((import("../../../../../types/FCElement").TBaseElCom<"el-affix", import("element-plus").AffixProps, {
         scroll: ({ scrollTop, fixed }: {

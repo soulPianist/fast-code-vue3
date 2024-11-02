@@ -5,7 +5,8 @@
       v-bind="unref(layout?.table)?.props || {}"
       :data="props.data"
       style="width: 100%"
-      ref='tableRef'
+      ref="tableRef"
+      v-loading="props.pageLoading"
     >
       <template v-for="item in columns" :key="item.key">
         <el-table-column v-if="item.slotName" v-bind="item.props">
@@ -61,11 +62,11 @@ const props = defineProps<
   }
 >();
 
-const tableRef = ref()
+const tableRef = ref();
 
 defineExpose({
-  tableRef
-})
+  tableRef,
+});
 
 const hidePart = (actions: Array<any>, scope: any) => {
   const res = unref(actions).filter((action) => {
@@ -119,11 +120,11 @@ const actionLoadings = ref(
   }
 );
 const runAction = (action: Function, scope: any, $index: number, index: number) => {
-  if(!actionLoadings.value[$index]){
-    actionLoadings.value[$index]={}
+  if (!actionLoadings.value[$index]) {
+    actionLoadings.value[$index] = {};
   }
   actionLoadings.value[$index][index] = true;
-  
+
   const pro = action(scope);
   try {
     pro.finally(() => {
